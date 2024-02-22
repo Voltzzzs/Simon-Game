@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(55, 65, 112);
+}
+
+
+.title {
+  color: rgb(238, 237, 236);
+  position:absolute;
+  left: 22%;
+  top: 5%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size:50px ;
+  user-select: none;
+  
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    row-gap: 6%;
+    column-gap: 5%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 500px;
+    width: 500px;
+}
+
+.opt {
+    position: relative;
+    left: 10px;
+    height: 200px;
+    width: 200px;
+    border: 5px solid black; 
+    border-radius: 10%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.aa {
+
+   background-color: green;
+ 
+}
+
+.ab {
+    background-color: rgb(42, 44, 170);
+}
+
+.ba{
+    background-color: yellow;
+}
+
+.bb{
+    background-color: red;
+}
+
+
+
+.opt:active {
+    background-color: rgb(32, 29, 29);
+}
+
+
+@keyframes flicker {
+    0% {
+    }
+  50%{
+   background-color: rgb(255, 255, 255);
+  }
+    
+    100% {
+    
+    }
+  }
+
+  .flick {
+    animation: flicker 2s;
+  }
