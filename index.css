@@ -3,10 +3,6 @@ body{
     width: 800px;
 }
 
-
-
-
-
 .box {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -49,12 +45,9 @@ body{
     background-color: red;
 }
 
-
-
 .opt:active {
     background-color: rgb(32, 29, 29);
 }
-
 
 @keyframes flicker {
     0% {
@@ -100,7 +93,6 @@ body{
   }
 
   .letitle {
- 
     left: 500px;
     color: rgb(228, 255, 75);
     font-family: cursive;

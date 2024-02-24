@@ -39,18 +39,6 @@ function randomColor() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function Gaming (){
   playerClick = [];
   
@@ -58,20 +46,14 @@ function Gaming (){
   gamerOrder.push(colorArray[randomcu])
 
   FlickSequence()
+
 }
-
-
-
-
-
-
 
 
 /* Flicking */
 function FlickSequence (){
   gamerOrder.forEach(function(element){
     element.classList.add("flick")
-
   })
 }
 
@@ -80,8 +62,33 @@ function FlickSequence (){
 
 function Player (){
   document.querySelectorAll(".opt").forEach(element =>{
-    element.addEventListener("click",()=>{
-     playerClick.push(this)
+    element.addEventListener("click",(event)=>{
+     playerClick.push(event.target)
+     console.log(playerClick)
+     console.log(gamerOrder)
     })
   })
+  let poscheck = playerClick.length-1
+  Check(poscheck)
 }
+
+
+
+
+
+function Check(position){
+    if(playerClick[position] === gamerOrder[position]){
+      if(playerClick.length === gamerOrder.length){
+      setTimeout(Gaming, 1000);
+      FlickSequence()
+      }
+    } else {
+      WrongStat()
+    }
+      
+  }
+
+
+  function WrongStat (){
+    alert("ain")
+  }
