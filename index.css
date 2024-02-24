@@ -1,18 +1,11 @@
 body{
     background-color: rgb(55, 65, 112);
+    width: 800px;
 }
 
 
-.title {
-  color: rgb(238, 237, 236);
-  position:absolute;
-  left: 22%;
-  top: 5%;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size:50px ;
-  user-select: none;
-  
-}
+
+
 
 .box {
     display: grid;
@@ -77,4 +70,41 @@ body{
 
   .flick {
     animation: flicker 2s;
+  }
+
+  .button {
+    display: flex;
+    border: 10px solid black;
+    left: 550px;
+    top: 300px;
+    font-weight: bold;
+    font-family: cursive;
+    border-radius: 15%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 90px;
+    background-color: rgb(20, 230, 184);
+    user-select: none;
+    z-index: 1;
+  }
+
+  .button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .button:active {
+    transform: scale(0.9);
+  }
+
+  .letitle {
+ 
+    left: 500px;
+    color: rgb(228, 255, 75);
+    font-family: cursive;
+    font-size: 50px;
+    position: relative;
+    display: flex;
   }
