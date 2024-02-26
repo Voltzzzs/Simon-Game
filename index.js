@@ -21,7 +21,6 @@ button.addEventListener("click", () => {
   });
 
   grido.style.display = "grid";
- 
 });
 
 document.querySelector(".button").addEventListener("click", Gaming);
@@ -39,8 +38,8 @@ function Gaming() {
   gamerOrder.push(colorArray[randomcu].id);
 
   FlickSequence();
-  console.log(playerClick)
-  console.log(gamerOrder) 
+  console.log(playerClick);
+  console.log(gamerOrder);
 }
 
 /* Flicking */
@@ -52,23 +51,21 @@ function FlickSequence() {
       element.classList.add("flick");
       setTimeout(() => {
         element.classList.remove("flick");
-      }, 1000);  // Adjust this value as needed
+      }, 1000); // Adjust this value as needed
     }, index * 1000);
   });
 }
 
-
 /* Flicking */
 
-
-  document.querySelectorAll(".opt").forEach((element) => {
-    element.addEventListener("click", (event) => {
-      playerClick.push(event.target.id);
-      poscheck = playerClick.length - 1;
-      Check(poscheck)
-    });
+document.querySelectorAll(".opt").forEach((element) => {
+  element.addEventListener("click", (event) => {
+    playerClick.push(event.target.id);
+    poscheck = playerClick.length - 1;
+    Check(poscheck);
+    document.querySelector("#bop").play();
   });
-
+});
 
 function Check(position) {
   if (playerClick[position] === gamerOrder[position]) {
@@ -83,7 +80,7 @@ function Check(position) {
 function WrongStat() {
   gamerOrder = [];
   playerClick = [];
-  document.querySelector(".end").style.display = "grid"
-  grido.style.display = "none"
+  document.querySelector(".end").style.display = "grid";
+  grido.style.display = "none";
+  document.querySelector("#wrong").play()
 }
-

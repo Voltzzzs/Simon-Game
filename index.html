@@ -3,22 +3,30 @@
   <head>
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Simon</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   </head>
   <body>
     <div class="button">Start</div>
     <div class="letitle">Simons Game</div>
 
     <div class="box" style="display: none">
-      <div class="opt aa" id ="aa"></div>
-      <div class="opt ab" id ="ab"></div>
-      <div class="opt ba" id ="ba"></div>
-      <div class="opt bb" id ="bb"></div>
+      <div class="opt aa" id="aa"></div>
+      <div class="opt ab" id="ab"></div>
+      <div class="opt ba" id="ba"></div>
+      <div class="opt bb" id="bb"></div>
     </div>
 
-    <div class="end" style="display: none;">
-    <div class="Gameover">Game over</div>
-    <div class="Restart">Restart</div>
-   </div>
+    <div class="end" style="display: none">
+      <div class="Gameover">Game over</div>
+      <div class="Restart">Restart</div>
+    </div>
+
+    <audio
+      src="sounds/377017__elmasmalo1__notification-pop.wav"
+      id="bop"
+    ></audio>
+
+    <audio src="sounds/554053__gronkjaer__wronganswer.mp3" id="wrong"></audio>
 
     <script src="index.js"></script>
   </body>
