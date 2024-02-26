@@ -1,4 +1,4 @@
-// The project is working and functional, only remains some Ui improvements //
+// The game is working and functional, only remains some Ui improvements //
 
 
 1. Introduction:
