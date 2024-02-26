@@ -1,102 +1,124 @@
-body{
-    background-color: rgb(55, 65, 112);
-    width: 800px;
+body {
+  background-color: rgb(55, 65, 112);
+  width: 800px;
 }
 
 .box {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    row-gap: 6%;
-    column-gap: 5%;
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    height: 500px;
-    width: 500px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  row-gap: 6%;
+  column-gap: 5%;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  height: 500px;
+  width: 500px;
 }
 
 .opt {
-    position: relative;
-    left: 10px;
-    height: 200px;
-    width: 200px;
-    border: 5px solid black; 
-    border-radius: 10%;
-    cursor: pointer;
-    user-select: none;
+  position: relative;
+  left: 10px;
+  height: 200px;
+  width: 200px;
+  border: 5px solid black;
+  border-radius: 10%;
+  cursor: pointer;
+  user-select: none;
 }
 
 .aa {
-
-   background-color: green;
- 
+  background-color: green;
 }
 
 .ab {
-    background-color: rgb(42, 44, 170);
+  background-color: rgb(42, 44, 170);
 }
 
-.ba{
-    background-color: yellow;
+.ba {
+  background-color: yellow;
 }
 
-.bb{
-    background-color: red;
+.bb {
+  background-color: red;
 }
 
 .opt:active {
-    background-color: rgb(32, 29, 29);
+  background-color: rgb(32, 29, 29);
 }
 
 @keyframes flicker {
-    0% {
-    }
-  50%{
-   background-color: rgb(255, 255, 255);
+  0% {
   }
-    
-    100% {
-    
-    }
+  50% {
+    background-color: rgb(255, 255, 255);
   }
 
-  .flick {
-    animation: flicker 2s;
+  100% {
   }
+}
 
-  .button {
-    display: flex;
-    border: 10px solid black;
-    left: 550px;
-    top: 300px;
-    font-weight: bold;
-    font-family: cursive;
-    border-radius: 15%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 200px;
-    height: 90px;
-    background-color: rgb(20, 230, 184);
-    user-select: none;
-    z-index: 1;
-  }
+.flick {
+  animation: flicker 1s;
+}
 
-  .button:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-  
-  .button:active {
-    transform: scale(0.9);
-  }
+.button {
+  display: flex;
+  border: 10px solid black;
+  left: 550px;
+  top: 300px;
+  font-weight: bold;
+  font-family: cursive;
+  border-radius: 15%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  height: 90px;
+  background-color: rgb(20, 230, 184);
+  user-select: none;
+  z-index: 1;
+}
 
-  .letitle {
-    left: 500px;
-    color: rgb(228, 255, 75);
-    font-family: cursive;
-    font-size: 50px;
-    position: relative;
-    display: flex;
-  }
+.button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.letitle {
+  left: 500px;
+  color: rgb(228, 255, 75);
+  font-family: cursive;
+  font-size: 50px;
+  position: relative;
+  display: flex;
+}
+
+.end{
+  top: 200px;
+  left: 435px;
+  position: absolute;
+  height: 220px;
+  width: 450px;
+  display: grid;
+  font-size: 90px;
+  justify-items: center;
+  align-items: center;
+  color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  user-select: none;
+}
+
+.end:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.end:active {
+  transform: scale(0.9);
+}
