@@ -11,8 +11,6 @@ let gamerOrder = [];
 let playerClick = [];
 let poscheck;
 
-var GameStart = false;
-
 /*Button*/
 button.addEventListener("click", () => {
   [button, letitle].forEach((element) => {
@@ -21,6 +19,7 @@ button.addEventListener("click", () => {
   });
 
   grido.style.display = "grid";
+  document.querySelector(".lvl").style.display = "flex";
 });
 
 document.querySelector(".button").addEventListener("click", Gaming);
@@ -38,21 +37,18 @@ function Gaming() {
   gamerOrder.push(colorArray[randomcu].id);
 
   FlickSequence();
-  console.log(playerClick);
-  console.log(gamerOrder);
 }
 
 /* Flicking */
 function FlickSequence() {
   gamerOrder.forEach(function (id, index) {
     const element = document.getElementById(id);
-
     setTimeout(() => {
       element.classList.add("flick");
       setTimeout(() => {
         element.classList.remove("flick");
-      }, 1000); // Adjust this value as needed
-    }, index * 1000);
+      }, 800); // Adjust this value as needed
+    }, index * 900);
   });
 }
 
@@ -71,6 +67,9 @@ function Check(position) {
   if (playerClick[position] === gamerOrder[position]) {
     if (playerClick.length === gamerOrder.length) {
       setTimeout(Gaming, 1000);
+
+      let LevelCounter = gamerOrder.length;
+      document.querySelector(".lvl").textContent = `LEVEL: ${LevelCounter+1}`;
     }
   } else {
     WrongStat();
@@ -78,9 +77,23 @@ function Check(position) {
 }
 
 function WrongStat() {
+  document.querySelector(".lvl").style.display = "none";
   gamerOrder = [];
   playerClick = [];
-  document.querySelector(".end").style.display = "grid";
+  end.style.display = "grid";
   grido.style.display = "none";
-  document.querySelector("#wrong").play()
+  document.querySelector("#wrong").play();
+  document.querySelector(".lvl").textContent = `LEVEL: 1`;
+
 }
+
+const end = document.querySelector(".reset");
+
+end.addEventListener("click", () => {
+  gamerOrder = [];
+  playerClick = [];
+  document.querySelector(".lvl").style.display = "flex";
+  grido.style.display = "grid";
+  end.style.display = "none";
+  setTimeout(Gaming, 1000);
+});

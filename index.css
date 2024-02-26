@@ -59,7 +59,7 @@ body {
 }
 
 .flick {
-  animation: flicker 1s;
+  animation: flicker 0.8s;
 }
 
 .button {
@@ -98,7 +98,7 @@ body {
   display: flex;
 }
 
-.end {
+.reset {
   top: 200px;
   left: 435px;
   position: absolute;
@@ -114,11 +114,20 @@ body {
   user-select: none;
 }
 
-.end:hover {
+.reset:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.end:active {
+.reset:active {
   transform: scale(0.9);
+}
+
+.lvl {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  left: 590px;
+  font-size: 50px;
+  font-family: cursive;
 }
